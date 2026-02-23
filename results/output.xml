@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.5 on win32)" generated="2026-02-23T09:33:05.598891" rpa="false" schemaversion="5">
+<suite id="s1" name="20260223" source="C:\Users\Pozsardaniel\Desktop\20260223">
+<suite id="s1-s1" name="Cart" source="C:\Users\Pozsardaniel\Desktop\20260223\cart.robot">
+<test id="s1-s1-t1" name="Check the price in Cart" line="57">
+<kw name="Login to Saucedemo mainpage">
+<kw name="Open Browser" owner="Selenium2Library">
+<msg time="2026-02-23T09:33:05.893490" level="INFO">Opening browser 'firefox' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>https://www.saucedemo.com/</arg>
+<arg>firefox</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-23T09:33:05.893165" elapsed="6.520119"/>
+</kw>
+<kw name="Input Text" owner="Selenium2Library">
+<msg time="2026-02-23T09:33:12.414346" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<arg>id:user-name</arg>
+<arg>standard_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-23T09:33:12.413651" elapsed="0.087730"/>
+</kw>
+<kw name="Input Password" owner="Selenium2Library">
+<msg time="2026-02-23T09:33:12.502082" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2026-02-23T09:33:12.510263" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id:password</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-23T09:33:12.501691" elapsed="0.042659"/>
+</kw>
+<kw name="Click Button" owner="Selenium2Library">
+<msg time="2026-02-23T09:33:12.544916" level="INFO">Clicking button 'id:login-button'.</msg>
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-23T09:33:12.544587" elapsed="0.120571"/>
+</kw>
+<status status="PASS" start="2026-02-23T09:33:05.892333" elapsed="6.773044"/>
+</kw>
+<kw name="Click Element" owner="Selenium2Library">
+<msg time="2026-02-23T09:33:12.666369" level="INFO">Clicking element 'id:add-to-cart-sauce-labs-backpack'.</msg>
+<arg>id:add-to-cart-sauce-labs-backpack</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-23T09:33:12.665996" elapsed="0.065264"/>
+</kw>
+<kw name="Click Element" owner="Selenium2Library">
+<msg time="2026-02-23T09:33:12.733482" level="INFO">Clicking element 'class:shopping_cart_badge'.</msg>
+<arg>class:shopping_cart_badge</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-23T09:33:12.732381" elapsed="0.078249"/>
+</kw>
+<kw name="Verify Cart Item Price">
+<kw name="Get Text" owner="Selenium2Library">
+<msg time="2026-02-23T09:33:12.836927" level="INFO">${item_cost} = $29.99</msg>
+<var>${item_cost}</var>
+<arg>class=inventory_item_price</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-23T09:33:12.811790" elapsed="0.025438"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${item_cost}</arg>
+<arg>${expected_cost}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-02-23T09:33:12.837450" elapsed="0.000616"/>
+</kw>
+<arg>$29.99</arg>
+<status status="PASS" start="2026-02-23T09:33:12.811140" elapsed="0.027111"/>
+</kw>
+<status status="PASS" start="2026-02-23T09:33:05.888493" elapsed="6.950136"/>
+</test>
+<status status="PASS" start="2026-02-23T09:33:05.645667" elapsed="7.197121"/>
+</suite>
+<status status="PASS" start="2026-02-23T09:33:05.605733" elapsed="7.240418"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="20260223" id="s1" pass="1" fail="0" skip="0">20260223</stat>
+<stat name="Cart" id="s1-s1" pass="1" fail="0" skip="0">20260223.Cart</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
